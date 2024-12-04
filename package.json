@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.86",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "name": "paper_search_script",
+  "version": "1.0.0",
+  "main": "setting.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
