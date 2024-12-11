@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
-    "strict": true
-  },
-  "include": ["src/**/*.ts"]
+    "lib": ["esnext"],
+    "experimentalDecorators": true
+  }
 }
