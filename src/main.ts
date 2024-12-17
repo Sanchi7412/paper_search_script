@@ -6,23 +6,14 @@ const db = SpreadSheetsSQL.open(DB_ID, SS_NAME);
 
 function main() {
   console.log("Hello, World!");
-    let test_data = getDB()
+  let test_data = getDB();
 }
 
 const doGet = (e) => {
-  return ContentService.createTextOutput("Hello, World!");
-};
-
-const doPost = (e) => {
   const path: string = e?.parameter.path;
 
-  if (path == "getDB") {
-    let data = getDB();
-
-    return ContentService.createTextOutput(JSON.stringify(data))
-  } else {
-    return ContentService.createTextOutput("Invalid Path");
-  }
+  let data: string[] = getDB();
+  return ContentService.createTextOutput(JSON.stringify(data));
 };
 
 function getDB() {
