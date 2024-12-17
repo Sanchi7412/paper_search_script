@@ -1,6 +1,16 @@
 {
   "devDependencies": {
+    "@google/clasp": "^2.4.2",
     "@types/google-apps-script": "^1.0.86",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "clasp": "^1.0.0",
+    "esbuild": "^0.24.0",
+    "esbuild-gas-plugin": "^0.8.0",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "prettier": "^3.4.2",
     "typescript": "^5.7.2"
   },
   "scripts": {
