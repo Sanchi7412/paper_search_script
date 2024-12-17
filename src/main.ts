@@ -7,15 +7,21 @@ const db = SpreadSheetsSQL.open(DB_ID, SS_NAME);
 function main() {
   console.log("Hello, World!");
     let test_data = getDB()
-
-    console.log(test_data)
-    console.log(JSON.parse(test_data))
 }
+
+const doGet = (e) => {
+  return ContentService.createTextOutput("Hello, World!");
+};
+
 const doPost = (e) => {
   const path: string = e?.parameter.path;
 
   if (path == "getDB") {
-    return getDB();
+    let data = getDB();
+
+    return ContentService.createTextOutput(JSON.stringify(data))
+  } else {
+    return ContentService.createTextOutput("Invalid Path");
   }
 };
 
@@ -23,7 +29,6 @@ function getDB() {
   let data: string[] = db
     .select(["paper_id", "title", "abstract", "category_list", "upload_date"])
     .result();
-  console.log(data);
 
-  return ContentService.createTextOutput(JSON.stringify(data));
+  return data;
 }
